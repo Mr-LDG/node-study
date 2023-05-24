@@ -9,10 +9,6 @@
   "author": "dglee",
   "license": "ISC",
   "dependencies": {
-    "@amuzlab/utils": "^1.2.9",
-    "bootstrap": "^5.2.3",
-    "express": "^4.18.2",
-    "pug": "^3.0.2",
-    "underscore": "^1.13.6"
+    "express": "^4.18.2"
   }
 }
