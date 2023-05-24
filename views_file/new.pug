@@ -1,0 +1,12 @@
+html 
+    head 
+        meta(charset='utf-8')
+    body 
+        h1 try make a new page!
+        form(action="/menu", method='post')
+            p
+                input(type='text' name='title' placeholder='title')
+            p 
+                textarea(name="description", cols="30", rows="10") 
+            p 
+                input(type="submit", value="등록")
