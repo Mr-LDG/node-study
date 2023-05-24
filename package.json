@@ -2,13 +2,15 @@
   "name": "study",
   "version": "1.0.0",
   "description": "pakage for node study",
-  "main": "app.js",
+  "main": "./bin/www",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "dglee",
   "license": "ISC",
   "dependencies": {
+    "@amuzlab/fs-promise": "^1.0.15",
+    "@amuzlab/utils": "^1.2.9",
     "axios": "^1.4.0",
     "cookie-parser": "^1.4.6",
     "express": "^4.18.2",

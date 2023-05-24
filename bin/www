@@ -1,0 +1,14 @@
+const app = require('../app'),
+    http = require('http'),
+    config = require('../conf/config.json'),
+    controller = require('../controller');
+
+app.set('port', config.this.port);
+
+let server = http.createServer(app);
+
+server.listen(config.this.port, async () => {
+    console.log('req server start');
+    await controller.videoController.checkVideos();
+    console.log(controller.videoController.videoArr.length);
+});
