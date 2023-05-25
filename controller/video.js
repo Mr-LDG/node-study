@@ -13,14 +13,18 @@ Object.defineProperties(
                 try {
                     await findVideo(SOURCE_PATH);
                     console.info('checkVideos success');
-                    console.table(VIDEO_FILES);
+                    // console.table(VIDEO_FILES);
                 } catch(err) {
                     console.error('fail!!!',err);
                 }
             }
         },
         videoArr: {
-            value: VIDEO_FILES
+            value: () => {
+                let changedArr = VIDEO_FILES.map(x => x.replace(/.+vams_video/, '\\\\192.168.0.97\\vams_video'));
+                // console.table(changedArr);
+                return changedArr;
+            }
         }
     }
 )

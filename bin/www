@@ -10,5 +10,14 @@ let server = http.createServer(app);
 server.listen(config.this.port, async () => {
     console.log('req server start');
     await controller.videoController.checkVideos();
-    console.log(controller.videoController.videoArr.length);
+    
+    console.table(controller.dataController.makeSRorNOTI());
+    console.log('++++++++++++++++++++++++++++++++++++++++++++++++++');
+    console.table(controller.dataController.makeKIDS());
+    console.log('++++++++++++++++++++++++++++++++++++++++++++++++++');
+    console.table(controller.dataController.makePOSTER());
+    console.log('++++++++++++++++++++++++++++++++++++++++++++++++++');
+    console.table(controller.dataController.makeCI());
+    
+    
 });

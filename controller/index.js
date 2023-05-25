@@ -4,6 +4,8 @@ Object.defineProperties(
         videoController: {
             value: require('./video')
         },
-        
+        dataController: {
+            value: require('./data')
+        }
     }
 )
