@@ -2,5 +2,6 @@
     "this": {
         "port": 3000
     },
-    "source": "Z:\\vams_video"
+    "source": "Z:\\vams_video",
+    "requestIp": "http://192.168.0.31/"
 }

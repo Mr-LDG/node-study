@@ -121,7 +121,7 @@ function makeActorList() {
     for(let i=0; i<4; i++) {
         let data = {};
         
-        data.person_id = rand(1,100000);
+        data.person_id = `${rand(1,100000)}`;
         data.person_nm = "PERSON-NM-"+rand(1,100000);
         data.csting_nm = "CAST-NM-"+rand(1,100000);
 

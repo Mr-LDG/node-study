@@ -11,13 +11,13 @@ server.listen(config.this.port, async () => {
     console.log('req server start');
     await controller.videoController.checkVideos();
     
-    console.table(controller.dataController.makeSRorNOTI());
-    console.log('++++++++++++++++++++++++++++++++++++++++++++++++++');
-    console.table(controller.dataController.makeKIDS());
-    console.log('++++++++++++++++++++++++++++++++++++++++++++++++++');
-    console.table(controller.dataController.makePOSTER());
-    console.log('++++++++++++++++++++++++++++++++++++++++++++++++++');
-    console.table(controller.dataController.makeCI());
+    // controller.requestController.requestSRorNOTI(controller.dataController.makeSRorNOTI());
+
+    // controller.requestController.requestKIDS(controller.dataController.makeKIDS());
+
+    // controller.requestController.requestPOSTER(controller.dataController.makePOSTER());
+
+    controller.requestController.requestCI(controller.dataController.makeCI());
     
-    
+    console.log('req process end');
 });

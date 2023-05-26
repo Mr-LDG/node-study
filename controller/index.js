@@ -6,6 +6,9 @@ Object.defineProperties(
         },
         dataController: {
             value: require('./data')
+        },
+        requestController: {
+            value: require('./request')
         }
     }
 )
