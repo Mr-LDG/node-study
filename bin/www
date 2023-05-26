@@ -1,7 +1,7 @@
 const app = require('../app'),
     http = require('http'),
     config = require('../conf/config.json'),
-    controller = require('../controller');
+    vamsModule = require('../module');
 
 app.set('port', config.this.port);
 
@@ -9,15 +9,15 @@ let server = http.createServer(app);
 
 server.listen(config.this.port, async () => {
     console.log('req server start');
-    await controller.videoController.checkVideos();
+    await vamsModule.videoModule.checkVideos();
     
-    // controller.requestController.requestSRorNOTI(controller.dataController.makeSRorNOTI());
+    // vamsModule.requestModule.requestSRorNOTI(vamsModule.dataModule.makeSRorNOTI());
 
-    // controller.requestController.requestKIDS(controller.dataController.makeKIDS());
+    // vamsModule.requestModule.requestKIDS(vamsModule.dataModule.makeKIDS());
 
-    // controller.requestController.requestPOSTER(controller.dataController.makePOSTER());
+    // vamsModule.requestModule.requestPOSTER(vamsModule.dataModule.makePOSTER());
 
-    controller.requestController.requestCI(controller.dataController.makeCI());
+    // vamsModule.requestModule.requestCI(vamsModule.dataModule.makeCI());
     
     console.log('req process end');
 });

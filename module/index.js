@@ -1,13 +1,13 @@
 Object.defineProperties(
     exports,
     {
-        videoController: {
+        videoModule: {
             value: require('./video')
         },
-        dataController: {
+        dataModule: {
             value: require('./data')
         },
-        requestController: {
+        requestModule: {
             value: require('./request')
         }
     }

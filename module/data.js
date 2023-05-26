@@ -18,8 +18,8 @@ Object.defineProperties(
                     
                     data.cc_conts_id = 'SR-TEST-'+cid;
                     data.cc_conts_nm = 'SR-TEST-NM-'+cid;
-                    data.cc_sers_id = 'TEST-SERIES-'+seriesInfo.sers_id;
-                    data.cc_sers_nm = 'TEST-SERIES-NM-'+seriesInfo.sers_nm;
+                    data.cc_sers_id = seriesInfo.sers_id;
+                    data.cc_sers_nm = seriesInfo.sers_nm;
                     data.org_url_path = videoPath;
                     data.genre_display = seriesInfo.genre_display;
                     data.detail_genre_display = seriesInfo.detail_genre_display;
@@ -48,8 +48,8 @@ Object.defineProperties(
                     data.cc_contents_id = 'KIZ-TEST-'+cid;
                     data.cc_contents_nm = 'KIZ-TEST-NM-'+cid;
                     data.master_contents_id = 'MASTER-'+cid;
-                    data.series_id = 'TEST-SERIES-'+seriesInfo.sers_id;
-                    data.series_nm = 'TEST-SERIES-NM-'+seriesInfo.sers_nm;
+                    data.series_id = seriesInfo.sers_id;
+                    data.series_nm = seriesInfo.sers_nm;
                     data.reading_contents_YN = 'Y',
                     data.origin_url_path = videoPath;
 
@@ -74,8 +74,8 @@ Object.defineProperties(
                     data.cc_contents_id = 'POSTER-TEST-'+cid;
                     data.cc_contents_nm = 'POSTER-TEST-NM-'+cid;
                     data.origin_url_path = videoPath;
-                    data.series_id = 'TEST-SERIES-'+seriesInfo.sers_id;
-                    data.series_nm = 'TEST-SERIES-NM-'+seriesInfo.sers_nm;
+                    data.series_id = seriesInfo.sers_id;
+                    data.series_nm = seriesInfo.sers_nm;
                     data.genre_display = seriesInfo.genre_display;
                     data.detail_genre_display = seriesInfo.detail_genre_display;
                     data.image_list = makePosterList();
@@ -101,8 +101,8 @@ Object.defineProperties(
                     data.cc_contents_id = 'FACE-TEST-'+cid;
                     data.cc_contents_nm = 'FACE-TEST-NM-'+cid;
                     data.master_contents_id = 'MASTER-'+cid;
-                    data.series_id = 'TEST-SERIES-'+seriesInfo.sers_id;
-                    data.series_nm = 'TEST-SERIES-NM-'+seriesInfo.sers_nm;
+                    data.series_id = seriesInfo.sers_id;
+                    data.series_nm = seriesInfo.sers_nm;
                     data.origin_url_path = videoPath;
                     data.actors_list = makeActorList();
 
