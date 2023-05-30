@@ -127,7 +127,7 @@ function makeActorList() {
 
         resultList.push(data);
     }
-    console.table(resultList);
+    // console.table(resultList);
     return resultList;
 }
 
@@ -144,7 +144,7 @@ function makePosterList() {
 
         resultList.push(data);
     }
-    console.table(resultList);
+    // console.table(resultList);
     return resultList;
 }
 

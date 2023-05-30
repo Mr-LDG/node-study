@@ -1,7 +1,8 @@
 const app = require('../app'),
     http = require('http'),
     config = require('../conf/config.json'),
-    vamsModule = require('../module');
+    vamsModule = require('../module'),
+    schedule = require('node-schedule');
 
 app.set('port', config.this.port);
 
@@ -9,15 +10,20 @@ let server = http.createServer(app);
 
 server.listen(config.this.port, async () => {
     console.log('req server start');
-    await vamsModule.videoModule.checkVideos();
+
+    schedule.scheduleJob('0 30 12 * * *', async function() {
+        await vamsModule.videoModule.checkVideos();
     
-    // vamsModule.requestModule.requestSRorNOTI(vamsModule.dataModule.makeSRorNOTI());
-
-    // vamsModule.requestModule.requestKIDS(vamsModule.dataModule.makeKIDS());
-
-    // vamsModule.requestModule.requestPOSTER(vamsModule.dataModule.makePOSTER());
-
-    // vamsModule.requestModule.requestCI(vamsModule.dataModule.makeCI());
+        await vamsModule.requestModule.requestSRorNOTI(vamsModule.dataModule.makeSRorNOTI());
     
-    console.log('req process end');
+        await vamsModule.requestModule.requestKIDS(vamsModule.dataModule.makeKIDS());
+    
+        await vamsModule.requestModule.requestPOSTER(vamsModule.dataModule.makePOSTER());
+    
+        await vamsModule.requestModule.requestCI(vamsModule.dataModule.makeCI());
+        
+        console.log('req process end');    
+    })
+
+    
 });

@@ -46,12 +46,24 @@ async function request(dataArr, type) {
         break;
     }
 
-    let data = dataArr[0];
-    // for(let data of dataArr) {
+    if(type == 'SR_NOTI'){
+        for(let data of dataArr) {
+            try {
+                await axios.post(url, data);
+                console.log(type, url);
+            } catch(err) {
+                console.error(data, err);
+            }
+        }
+    } else {
+        let data = dataArr[0];
         try {
             await axios.post(url, data);
+            console.log(type, url);
         } catch(err) {
             console.error(data, err);
         }
-    // }
+    }
+    
+    
 }
